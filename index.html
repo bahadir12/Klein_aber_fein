@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Backend Zinciri | Asla Kırma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Warp Effect Overlay -->
+    <div id="warp-layer">
+        <div class="hyperspace-lines"></div>
+        <h1
+            style="color: white; font-size: 3rem; text-transform: uppercase; letter-spacing: 5px; text-shadow: 0 0 20px #00f260;">
+            Hazırlanıyor...</h1>
+    </div>
+
+    <div id="app">
+        <!-- Confetti Canvas -->
+        <canvas id="confetti-canvas"></canvas>
+
+        <header>
+            <div class="lives-container">
+                <span id="lives-icon">🛡️</span>
+                <span id="lives-count">3</span>
+                <span class="label">CAN</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar-bg">
+                    <div id="progress-fill" style="width: 0%"></div>
+                </div>
+                <div class="day-indicator">GÜN <span id="current-day">1</span> / 21</div>
+            </div>
+        </header>
+
+        <main>
+            <div class="card glass-panel" id="daily-card">
+                <div class="card-header">
+                    <h1 id="topic-title">Yükleniyor...</h1>
+                    <span class="badge" id="day-badge">GÜN 1</span>
+                </div>
+
+                <div class="card-content">
+                    <h3>TEORİ</h3>
+                    <p id="theory-text">Yükleniyor...</p>
+
+                    <h3>GÖREV</h3>
+                    <div class="code-block">
+                        <pre><code id="task-text">// Görev Yükleniyor...</code></pre>
+                    </div>
+                </div>
+
+                <div class="quote-container hidden" id="quote-box">
+                    <p id="quote-text">"Başarı, her gün tekrarlanan küçük çabaların toplamıdır."</p>
+                </div>
+            </div>
+
+            <div id="message-area" class="message-area"></div>
+        </main>
+
+        <footer>
+            <button id="complete-btn" class="main-btn">GÖREVİ TAMAMLA</button>
+            <br><br>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content glass-panel error-glow">
+            <h2 style="color: #ff416c; font-size: 2rem;">⛔ ZİNCİR KOPTU ⛔</h2>
+            <br>
+            <p style="color: #ddd;">Tüm canlarını kaybettin.</p>
+            <p style="color: #ddd;">Maalesef en başa dönmek zorundasın.</p>
+            <button id="restart-btn" class="danger-btn">YENİDEN BAŞLA</button>
+        </div>
+    </div>
+
+    <div id="milestone-modal" class="modal hidden">
+        <div class="modal-content glass-panel success-glow">
+            <h2 id="milestone-title" style="color: #38ef7d; font-size: 2rem;">🔥 HARİKA! 🔥</h2>
+            <br>
+            <p id="milestone-text" style="color: #fff;">Kritik bir noktayı aştın.</p>
+            <br>
+            <button id="continue-btn" class="main-btn">DEVAM ET</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
