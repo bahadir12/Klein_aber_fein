@@ -26,11 +26,14 @@ body {
     animation: gradientBG 15s ease infinite;
     color: var(--text-primary);
     font-family: var(--font-main);
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-y: auto;
+    /* Allow scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
+    /* Add vertical padding */
 }
 
 @keyframes gradientBG {
@@ -50,7 +53,8 @@ body {
 #app {
     width: 100%;
     max-width: 600px;
-    height: 95vh;
+    min-height: 100vh;
+    /* Allow growth */
     display: flex;
     flex-direction: column;
     padding: 20px;
