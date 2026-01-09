@@ -253,11 +253,11 @@ main {
     pointer-events: none;
 }
 
-/* Footer / Button */
-footer {
-    margin-top: 20px;
+/* Action Area */
+.action-container {
+    margin-top: 25px;
     text-align: center;
-    position: relative;
+    width: 100%;
 }
 
 .main-btn {
